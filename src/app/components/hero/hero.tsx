@@ -1,38 +1,23 @@
+import CustomButton from "../button/Button"
 
 export default function Hero() {
-    return(
-
-<section className="bg-[url(/images/bg-car.png)] bg-no-repeat bg-cover bg-center bg-slate-50">
-  <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-    <div className="mx-auto max-w-3xl text-center">
-      <h1
-        className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
-      >
-        Find your dream car
-
-      </h1>
-
-      <p className="mx-auto text-white mt-4 max-w-xl sm:text-xl/relaxed">
-        We can help you to buy a car
-      </p>
-
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-          href="#"
-        >
-          Get Started
-        </a>
-
-        <a
-          className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium hover:text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-          href="#"
-        >
-          Learn More
-        </a>
+    
+  return(
+    <section className="hero min-h-screen ">
+      <div className="hero-content gap-5 lg:flex-row flex-col">
+        <div className="flex flex-col items-start gap-5">
+          <h1
+            className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-wrap max-w-xl text-5xl md:text-7xl font-extrabold text-transparent"
+          >
+            Find your dream car
+          </h1>
+          <p className="max-w-xl text-2xl ">
+            Let us help you get your next car
+          </p>
+          <CustomButton type="button" style="text-[#F5F5F5] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 rounded-full">Explore cars</CustomButton>
+        </div>
+        <img src="/images/hero.webp" alt="car-bg" className="max-w-xl" />
       </div>
-    </div>
-  </div>
-</section>
+    </section>
     )
 }
