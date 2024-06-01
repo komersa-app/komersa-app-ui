@@ -1,16 +1,7 @@
 import Link from "next/link";
 import CustomButton from "../button/Button";
+import { links } from "../utils/Link";
 
-let links = [{
-        name: "Home",
-        link:"/"
-    },{
-        name: "View all cars",
-        link: "/cars"
-    },{
-        name: "Contact us",
-        link: "/contact"
-    }]
 
 export default function Navbar(){
     return (
