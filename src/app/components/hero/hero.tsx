@@ -1,8 +1,8 @@
-import CustomButton from "../button/Button"
+// Hero.tsx
+import CustomButton from "../button/Button";
 
 export default function Hero() {
-    
-  return(
+  return (
     <section className="hero min-h-screen ">
       <div className="hero-content gap-5 lg:flex-row flex-col">
         <div className="flex flex-col items-start gap-5">
@@ -19,5 +19,5 @@ export default function Hero() {
         <img src="/images/hero.webp" alt="car-bg" className="max-w-xl" />
       </div>
     </section>
-    )
+  );
 }
