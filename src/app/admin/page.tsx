@@ -1,7 +1,10 @@
-// admin
 import { NextPage } from "next";
-import dynamic  from "next/dynamic";
-const AdminApp = dynamic (() => import ("./AdminDashboard"), {ssr: false})
-const Admin: NextPage = () => <AdminApp />;
+import dynamic from "next/dynamic";
 
-export default Admin;
+const AdminApp = dynamic(() => import("../components/AdminApp"), { ssr: false });
+
+const PageComponent: NextPage = () => {
+  return <AdminApp />;
+};
+
+export default PageComponent;
