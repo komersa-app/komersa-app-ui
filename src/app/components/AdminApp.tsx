@@ -1,16 +1,16 @@
-'use client';
-import { Admin, Resource, ListGuesser, EditGuesser } from "react-admin";
-import jsonServerProvider from "ra-data-json-server";
+import * as React from 'react';
+import { Admin, Resource } from 'react-admin';
 import simpleRestProvider from 'ra-data-simple-rest';
-import { UserCreate } from "./user/UserCreate";
-import UserEdit from "./user/UserEdit";
-import { UserList } from "./user/UserList";
+import { UserCreate } from './user/UserCreate';
+import UserEdit from './user/UserEdit';
+import { UserList } from './user/UserList';
+import authProvider from '../admin/authProvider';
 
-const dataProvider = simpleRestProvider("http://http://localhost:8080");
+const dataProvider = simpleRestProvider("http://localhost:8080");
 
 const AdminApp: React.FC = () => (
-  <Admin dataProvider={dataProvider}>
-    <Resource name="User" list={UserList} edit={UserEdit} create={UserCreate} />
+  <Admin authProvider={authProvider} dataProvider={dataProvider}>
+    <Resource name="users" list={UserList} edit={UserEdit} create={UserCreate} />
   </Admin>
 );
 
