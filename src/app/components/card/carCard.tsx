@@ -1,6 +1,6 @@
 'use client'
 
-import { CarDtoResponse } from "../provider/typescript-client/api"
+import { ImagesDtoResponse } from "../provider/typescript-client/api"
 import { FaBoltLightning } from "react-icons/fa6";
 import { FaGasPump } from "react-icons/fa6";
 import { GrStatusWarningSmall } from "react-icons/gr";
@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 
 
 type CarCardProps = {
-    car: CarDtoResponse;
+    car: ImagesDtoResponse;
 };
 
 export default function CarCard( { car }  : CarCardProps){
@@ -18,20 +18,20 @@ export default function CarCard( { car }  : CarCardProps){
         <div className="card w-96 border-gray-500 shadow-lg rounded-lg transform transition duration-500 hover:scale-110 ">
             <figure> <img src="/images/hero.webp" alt="car" /></figure>
             <div className="card-body">
-                <h2 className="card-title">{car.details?.brand +' '+ car.details?.model}</h2>
-                <h2 className="font-bold"> {`$${car.price?.amount}`} </h2>
+                <h2 className="card-title">{car.car?.details?.brand +' '+ car.car?.details?.model}</h2>
+                <h2 className="font-bold"> {`$${car.car?.price?.amount}`} </h2>
                 <div className="flex w-full items-center justify-between">
                     <div className="flex items-center justify-center gap-1">
                         <GrStatusWarningSmall />
-                        <span className="text-sm text-gray-400">{car.status}</span>
+                        <span className="text-sm text-gray-400">{car.car?.status}</span>
                     </div> 
                     <div className="flex items-center justify-center gap-1">
                         <FaGasPump />
-                        <span className="text-sm text-gray-400">{car.motorType}</span>
+                        <span className="text-sm text-gray-400">{car.car?.motorType}</span>
                     </div> 
                     <div className="flex items-center justify-center gap-1">
                         <FaBoltLightning />
-                        <span className="text-sm text-gray-400">{car.power}</span>
+                        <span className="text-sm text-gray-400">{car.car?.power}</span>
                     </div> 
                 </div>
                 <div className="card-actions">
