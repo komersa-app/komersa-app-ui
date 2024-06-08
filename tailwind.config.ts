@@ -12,7 +12,16 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+
       },
+      
+      width: {
+        '100': '100%',  // Vous pouvez définir d'autres largeurs personnalisées ici.
+        '128': '32rem', // Exemple de largeur personnalisée de 128 unités Tailwind.
+      },
+      borderWidth: {
+        '1': '1px', // Ajoute une taille de bordure de 1 pixel
+      }
     },
   },
   plugins: [

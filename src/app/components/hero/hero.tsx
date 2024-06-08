@@ -1,23 +1,26 @@
 // Hero.tsx
+import { Height } from "@mui/icons-material";
 import CustomButton from "../button/Button";
 
 export default function Hero() {
   return (
-    <section className="hero min-h-screen ">
-      <div className="hero-content gap-5 lg:flex-row flex-col">
-        <div className="flex flex-col items-start gap-5">
+    <section className="hero " style={{minHeight:"90vh"}}>
+      <div className="hero-content space-x-72 lg:flex-row flex-col " style={{width:"90%",height:"70%"}}>
+        <div className="flex flex-col items-start gap-5" style={{height:"70%",justifyContent:"center"}}>
           <h1
-            className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-wrap max-w-xl text-5xl md:text-7xl font-extrabold text-transparent"
+            className=" bg-clip-text text-wrap max-w-xl  md:text-5xl font-bold " style={{fontSize:"40px"}}
           >
-            Find your dream car
+           BEST CAR SELLER
           </h1>
-          <p className="max-w-xl text-2xl ">
-            Let us help you get your next car
+          <p className="max-w-xl text-xl font-semibold ">
+            LET US HELP YOU TO GET YOUR  CAR
           </p>
-          <CustomButton type="button" style="text-[#F5F5F5] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 rounded-full">Explore cars</CustomButton>
+          <button className="btn   btn-outline">Explore Car</button>
         </div>
-        <img src="/images/hero.webp" alt="car-bg" className="max-w-xl" />
+        
+        <div><img src="/images/hero.webp" alt="car-bg" className="max-w-xl" /></div>
       </div>
     </section>
+   
   );
 }

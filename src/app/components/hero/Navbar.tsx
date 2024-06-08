@@ -1,17 +1,23 @@
+'use client'
 import Link from "next/link";
 import CustomButton from "../button/Button";
 import { links } from "../utils/Link";
+import Lottie from "lottie-react";
+import animationData from "../../lottie/Animation - 1717797545007.json";
+
 
 
 export default function Navbar(){
     return (
-        <nav className="navbar bg-base-100 py-3 px-10">
-            <div className="navbar-start">
+        <nav className="navbar bg-base-100 py-3 px-10 rounded-r-lg rounded-br-lg rounded-bl-lg  border-b-1 border-black ">
+            <div className="navbar-start" style={{display:"flex",flexDirection:'row',alignItems:'center'}}>
                 <Link href="/">
-                     <span className="bg-gradient-radial text-transparent from-green-300 via-blue-500 to-purple-600 bg-clip-text font-bold text-3xl">Car Sale</span>
+                     <span className=" bg-clip-text font-bold text-3xl font-sans ml-24 ">SWIFT</span>
+
                 </Link>
+                <Lottie animationData={animationData} loop={true} autoplay={true} className="w-20 h-20" />
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex bg-white font-sans font-semibold">
                 <ul className="menu menu-horizontal">{
                     links.map((link,i )=><li key={i} className="text-base"><Link href={link.link}>{link.name}</Link></li>)
                     }
@@ -29,7 +35,7 @@ export default function Navbar(){
                         }
                     </ul>
                 </div>
-                <CustomButton style="rounded-full text-blue-500 bg-white" type="button" >Sign in</CustomButton>
+                <CustomButton style="rounded-full  bg-white font-sans font-semibold" type="button" >Sign in</CustomButton>
             </div>
         </nav>
     );
