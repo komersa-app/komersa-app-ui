@@ -16,7 +16,7 @@ export default function CarCard( { car }  : CarCardProps){
     const router = useRouter();
     return (
         <div className="card w-96 border-gray-500 shadow-lg rounded-lg transform transition duration-500 hover:scale-110 ">
-            <figure> <img src="/images/hero.webp" alt="car" /></figure>
+            <figure> <img src={car.url} alt="car" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{car.car?.details?.brand +' '+ car.car?.details?.model}</h2>
                 <h2 className="font-bold"> {`$${car.car?.price?.amount}`} </h2>
