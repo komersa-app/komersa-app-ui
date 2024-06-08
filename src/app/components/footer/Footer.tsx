@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="footer footer-center py-3 bg-base-200">
+        <footer className="footer mb-0 footer-center py-3 bg-base-200">
             <div className="grid grid-flow-col gap-3">
                 {
                     links.map((link, i) => <Link key={i} href={link.link} className="link link-hover text-base">{link.name}</Link>)
