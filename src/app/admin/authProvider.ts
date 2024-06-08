@@ -3,7 +3,7 @@ import { fetchUtils } from 'ra-core';
 
 const authProvider: AuthProvider = {
   login: async ({ username, password }) => {
-    const request = new Request('http://localhost:8080/login', {
+    const request = new Request('http://localhost:8080/api/auth/login', {
       method: 'POST',
       body: JSON.stringify({ email: username, password }),
       headers: new Headers({ 'Content-Type': 'application/json' }),
