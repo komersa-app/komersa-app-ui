@@ -7,5 +7,5 @@ export default function page() {
   useEffect(() =>{
     route.push('/home')
   },[route]);
-  return <h1 className="text-center text-3xl font-bold">Redirecting to home</h1>;
+  return null;
 }

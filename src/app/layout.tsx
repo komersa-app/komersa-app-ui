@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '700','900'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
   title: "Car sale",
-  description: "Website for Car saling",
+  description: "Website for Car sales",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={`${poppins.className}`}>{children}</body>
     </html>
   );
 }
