@@ -1,6 +1,6 @@
 'use client'
-import { ImagesControllerApi , ImagesDtoResponse, PageImagesDtoResponse } from "./provider/typescript-client";
-import { Pageable } from "./provider/typescript-client";
+import { ImagesControllerApi , ImagesDtoResponse, PageImagesDtoResponse } from "@/provider/typescript-client";
+import { Pageable } from "@/provider/typescript-client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import CarCard from "./card/carCard";

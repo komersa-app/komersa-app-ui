@@ -1,8 +1,8 @@
 'use client'
-import { ImagesControllerApi , ImagesDtoResponse, PageImagesDtoResponse } from "../../components/provider/typescript-client";
-import { Pageable } from "../../components/provider/typescript-client";
+import { ImagesControllerApi , ImagesDtoResponse, PageImagesDtoResponse } from "@/provider/typescript-client";
+import { Pageable } from "@/provider/typescript-client";
 import { useEffect, useState } from "react";
-import CarCard from "../../components/card/carCard";
+import CarCard from "../../../components/card/carCard";
 
 export default function Recommandation() {
     const [carResponse, setCarResponse] = useState<PageImagesDtoResponse | undefined>();

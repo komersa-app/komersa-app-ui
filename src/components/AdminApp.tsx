@@ -4,7 +4,7 @@ import simpleRestProvider from 'ra-data-simple-rest';
 import { UserCreate } from './user/UserCreate';
 import UserEdit from './user/UserEdit';
 import { UserList } from './user/UserList';
-import authProvider from '../admin/authProvider';
+import authProvider from '../app/admin/authProvider';
 
 const dataProvider = simpleRestProvider("http://localhost:8080");
 

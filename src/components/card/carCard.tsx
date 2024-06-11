@@ -1,6 +1,6 @@
 'use client'
 
-import { ImagesDtoResponse } from "../provider/typescript-client/api"
+import { ImagesDtoResponse } from "@/provider/typescript-client/api"
 import { FaBoltLightning } from "react-icons/fa6";
 import { FaGasPump } from "react-icons/fa6";
 import { GrStatusWarningSmall } from "react-icons/gr";

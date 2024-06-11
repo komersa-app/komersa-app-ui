@@ -1,7 +1,7 @@
 'use client'
 
-import Loader from "@/app/components/loader/loader";
-import { ImagesControllerApi, ImagesDtoResponse } from "@/app/components/provider/typescript-client";
+import Loader from "@/components/loader/loader";
+import { ImagesControllerApi, ImagesDtoResponse } from "@/provider/typescript-client";
 import { useEffect, useState } from "react";
 
 interface detailsProps {
