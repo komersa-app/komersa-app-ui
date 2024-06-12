@@ -1,12 +1,11 @@
 import React from 'react';
-import { EditProps, Edit, SimpleForm, TextInput } from 'react-admin';
+import { Edit, SimpleForm, TextInput } from 'react-admin';
 
-interface UserEditProps extends EditProps {
-}
 
-const UserEdit: React.FC<UserEditProps> = (props) => {
+
+export const UserEdit = () => {
   return (
-    <Edit {...props}>
+    <Edit>
       <SimpleForm>
         <TextInput source="name" />
         <TextInput source="email" />
@@ -16,4 +15,3 @@ const UserEdit: React.FC<UserEditProps> = (props) => {
   );
 };
 
-export default UserEdit;

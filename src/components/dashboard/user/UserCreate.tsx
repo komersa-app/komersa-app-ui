@@ -1,11 +1,9 @@
 import React from 'react';
-import { CreateProps, Create, SimpleForm, TextInput } from 'react-admin';
+import {  Create, SimpleForm, TextInput } from 'react-admin';
 
-interface UserCreateProps extends CreateProps {
-}
 
-export const UserCreate = (props: UserCreateProps) => (
-  <Create {...props}>
+export const UserCreate = () => (
+  <Create>
     <SimpleForm>
       <TextInput source="name" />
       <TextInput source="email" />
