@@ -18,7 +18,7 @@ export default function CarCard( { car }  : CarCardProps){
         <div className="card w-96 border-gray-500 shadow-lg rounded-lg transform transition duration-500 hover:scale-110 ">
             <figure> <img src={car?.images?.at(0)?.url} alt="car" /></figure>
             <div className="card-body">
-                <h2 className="card-title">{car?.details?.brand +' '+ car?.details?.model}</h2>
+                <h2 className="card-title">{car?.brand?.name +' '+ car?.model}</h2>
                 <h2 className="font-bold"> {`$${car?.price?.amount}`} </h2>
                 <div className="flex w-full items-center justify-between">
                     <div className="flex items-center justify-center gap-1">

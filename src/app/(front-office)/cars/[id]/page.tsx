@@ -45,12 +45,12 @@ export default function CardDetails({params} : detailsProps) {
                         <img src={carDetails?.images?.at(0)?.url} alt="car" />
                     </div>
                     <div className="block mt-5 ">
-                        <h1 className="lg:text-4xl">{`${carDetails?.details?.brand} ${carDetails?.details?.model} ${carDetails?.name}`} </h1>
+                        <h1 className="lg:text-4xl">{`${carDetails?.brand?.name} ${carDetails?.model} ${carDetails?.name}`} </h1>
                         <h1 className="lg:text-4xl font-semibold text-indigo-700"> {`$${carDetails?.price?.amount}`} </h1>
                         <div className="card w-96 p-3 rounded-md border-2 border-gray-400 shadow-sm">
                             <div className="flex justify-between">
                                 <h2 className="font-[400]"> Make </h2>
-                                <h2>{carDetails?.details?.brand}</h2>
+                                <h2>{carDetails?.brand?.name}</h2>
                             </div>
                             <div className="flex justify-between">
                                 <h2 className="font-[400]"> Name </h2>
@@ -58,7 +58,7 @@ export default function CardDetails({params} : detailsProps) {
                             </div>
                             <div className="flex justify-between">
                             <h2 className="font-[400]"> Model </h2>
-                                <h2>{carDetails?.details?.model}</h2>
+                                <h2>{carDetails?.model}</h2>
                             </div>
                             <div className="flex justify-between">
                             <h2 className="font-[400]"> Color </h2>

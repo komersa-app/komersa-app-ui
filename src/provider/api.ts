@@ -1,7 +1,7 @@
-import { AdminControllerApi, AppointmentControllerApi, CarControllerApi, DetailsControllerApi, ImagesControllerApi, LoginControllerApi, PricesControllerApi, VisitorControllerApi } from "./typescript-client";
+import { AdminControllerApi, AppointmentControllerApi, CarControllerApi, BrandControllerApi, ImagesControllerApi, LoginControllerApi, PricesControllerApi, VisitorControllerApi } from "./typescript-client";
 
 
-export const detailsApi = () => new DetailsControllerApi();
+export const brandApi = () => new BrandControllerApi();
 export const priceApi = () => new PricesControllerApi();
 export const carApi = () => new CarControllerApi();
 export const imageApi = () => new ImagesControllerApi();
