@@ -1,16 +1,19 @@
 import { AuthProvider } from 'react-admin';
-import { fetchUtils } from 'ra-core';
+import { loginApi } from './api';
+import { LoginDtoRequest } from './typescript-client';
 
 const authProvider: AuthProvider = {
-  login: async ({ username, password }) => {
-    const request = new Request('http://localhost:8080/api/auth/login', {
-      method: 'POST',
-      body: JSON.stringify({ email: username, password }),
-      headers: new Headers({ 'Content-Type': 'application/json' }),
+  login: async ({ name, password } : LoginDtoRequest) => {
+    const res = await loginApi().login({
+      name: name,
+      password: password
     });
-    const response = await fetchUtils.fetchJson(request);
-    const { token } = response.json;
-    localStorage.setItem('token', token);
+    if(res.data.token){
+      localStorage.setItem('token',res.data.token);
+      return Promise.resolve();
+    }
+    return Promise.reject();
+    
   },
   logout: () => {
     localStorage.removeItem('token');

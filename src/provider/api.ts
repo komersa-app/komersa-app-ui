@@ -8,4 +8,4 @@ export const imageApi = () => new ImagesControllerApi();
 export const adminApi = () =>  new AdminControllerApi();
 export const appointmentApi = () => new AppointmentControllerApi();
 export const visitorApi = () => new VisitorControllerApi();
-export const logintApi = () => new LoginControllerApi();
+export const loginApi = () => new LoginControllerApi();
