@@ -1,11 +1,10 @@
 import { AuthProvider } from 'react-admin';
 import { loginApi } from './api';
-import { LoginDtoRequest } from './typescript-client';
 
 const authProvider: AuthProvider = {
-  login: async ({ name, password } : LoginDtoRequest) => {
+  login: async ({ username, password } ) => {
     const res = await loginApi().login({
-      name: name,
+      name: username,
       password: password
     });
     if(res.data.token){
