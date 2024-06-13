@@ -1,12 +1,11 @@
 import { Admin, Login, Resource } from 'react-admin';
-import simpleRestProvider from 'ra-data-simple-rest';
 import { UserCreate } from './dashboard/user/UserCreate';
 import { UserEdit }from './dashboard/user/UserEdit';
 import { UserList } from './dashboard/user/UserList';
 import authProvider from '../provider/authProvider';
 import { UserShow } from './dashboard/user/UserShow';
+import dataProvider from '@/provider/data-provider';
 
-const dataProvider = simpleRestProvider("http://localhost:8080");
 
 const AdminApp = () => (
   <Admin loginPage={Login} authProvider={authProvider} dataProvider={dataProvider}>
