@@ -1,7 +1,8 @@
-import { DataProvider } from "react-admin";
+import { DataProvider, DeleteManyParams, DeleteManyResult, GetManyParams, GetManyReferenceParams, GetManyReferenceResult, GetManyResult, Identifier, RaRecord, UpdateManyParams, UpdateManyResult } from "react-admin";
 import { adminProvider } from "./admin-provider";
 import { carProvider } from "./car-provider";
 import { CustomDataProvider } from "./type";
+import { appointmentProvider } from "./appointment-provider";
 
 
 const getProvider = (resource: string): CustomDataProvider => {
@@ -10,6 +11,8 @@ const getProvider = (resource: string): CustomDataProvider => {
             return adminProvider;
         case "cars":
             return carProvider;    
+        case "appointments":
+            return appointmentProvider;
         default:
             throw new Error("Unknown resource type");    
     }  
@@ -53,18 +56,53 @@ const dataProvider: DataProvider = {
             data: response
         }
     },
-    deleteMany: ()=>{
-        throw new Error("Not implemented");
+    getMany: function <RecordType extends RaRecord<Identifier> = any>(resource: string, params: GetManyParams): Promise<GetManyResult<RecordType>> {
+        throw new Error("Function not implemented.");
     },
-    getMany: ()=>{
-        throw new Error("Not implemented");
+    getManyReference: function <RecordType extends RaRecord<Identifier> = any>(resource: string, params: GetManyReferenceParams): Promise<GetManyReferenceResult<RecordType>> {
+        throw new Error("Function not implemented.");
     },
-    getManyReference: ()=>{
-        throw new Error("Not implemented");
+    updateMany: function <RecordType extends RaRecord<Identifier> = any>(resource: string, params: UpdateManyParams<any>): Promise<UpdateManyResult<RecordType>> {
+        throw new Error("Function not implemented.");
     },
-    updateMany: ()=>{
-        throw new Error("Not implemented");
+    deleteMany: function <RecordType extends RaRecord<Identifier> = any>(resource: string, params: DeleteManyParams<RecordType>): Promise<DeleteManyResult<RecordType>> {
+        throw new Error("Function not implemented.");
+    }
+    /*
+    getManyReference: async (resource, params) => {
+        // Assuming getProvider has a method to retrieve records based on a reference ID
+        const {id, meta} = params;
+        const response = await getProvider(resource).getManyReference(id.toString(), meta);
+        return {
+            data: response
+        };
     },
+    deleteMany: async (resource, params) => {
+        // Assuming getProvider has a method to delete many records based on certain criteria
+        const {ids, meta} = params; // Assuming filter is used to specify which records to delete
+        const response = await getProvider(resource).deleteMany(ids, meta);
+        return {
+            data: response
+        };
+    },
+    getMany: async (resource, params) => {
+        // Assuming getProvider has a method to retrieve many records based on certain criteria
+        const {ids, meta} = params;
+        const response = await getProvider(resource).getMany(ids, meta);
+        return {
+            data: response,
+            total: response.length
+        };
+    },
+    updateMany: async (resource, params) => {
+        // Assuming getProvider has a method to update many records based on certain criteria
+        const {ids, data: payload, meta} = params; // Assuming filter is used to specify which records to update
+        const response = await getProvider(resource).updateMany(ids, payload, meta);
+        return {
+            data: response
+        };
+    }
+    */
 }
 
 export default dataProvider;

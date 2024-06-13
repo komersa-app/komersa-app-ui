@@ -3,7 +3,7 @@ import { CustomDataProvider } from "./type";
 import { AdminDtoRequest, Pageable } from "./typescript-client";
 
 export const adminProvider : CustomDataProvider = {
-    getList: async function (page?: number | undefined, perPage?: number | undefined, sort?:any, filter?: any, meta?: any): Promise<any> {
+    getList: async function (page?: number | undefined, perPage?: number | undefined, sort?: any, filter?: any, meta?: any): Promise<any> {
         const pageable: Pageable = {};
         return await adminApi().getAllAdmin(pageable).then(response => response.data.content);
     },
@@ -14,9 +14,21 @@ export const adminProvider : CustomDataProvider = {
         return await adminApi().createAdmin(resources).then(response => response.data);
     },
     update: async function (id: string, resources: AdminDtoRequest, meta?: any): Promise<any> {
-        return await adminApi().updateAdmin(parseInt(id),resources).then(response => response.data);
+        return await adminApi().updateAdmin(parseInt(id), resources).then(response => response.data);
     },
     delete: async function (id: string): Promise<any> {
-        return await adminApi().deleteAdmin(parseInt(id)).then(response => response.data)
+        return await adminApi().deleteAdmin(parseInt(id)).then(response => response.data);
+    },
+    getManyReference: function (id: string, meta?: any): Promise<any> {
+        throw new Error("Function not implemented.");
+    },
+    deleteMany: function (filter?: any, meta?: any): Promise<any> {
+        throw new Error("Function not implemented.");
+    },
+    getMany: function (filter?: any, sort?: any, page?: number | undefined, perPage?: number | undefined, meta?: any): Promise<any> {
+        throw new Error("Function not implemented.");
+    },
+    updateMany: function (resources: any, filter?: any, meta?: any): Promise<any> {
+        throw new Error("Function not implemented.");
     }
 }
