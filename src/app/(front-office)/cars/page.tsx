@@ -4,6 +4,7 @@ import { carApi } from "@/provider";
 import { Pageable } from "@/provider/typescript-client/api";
 import { useEffect, useState } from "react";
 import CarCard from "@/components/card/carCard";
+import Brand from "@/components/filter/brand";
 
 export default function Recommandation() {
     const [carResponse, setCarResponse] = useState<PageCarDtoResponse | undefined>();
@@ -25,6 +26,7 @@ export default function Recommandation() {
     return(
         <section className="flex flex-col gap-10 items-center py-6 ">
             <h1 className="text-center text-5xl font-[700]">View Cars</h1>
+            <Brand />
             <div className="flex gap-5 py-10 px-10  flex-row flex-wrap">
                 { 
                    carResponse?.content?.map((car: CarDtoResponse, index: number) => {
