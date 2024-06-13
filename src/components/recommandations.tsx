@@ -28,17 +28,17 @@ export default function Recommandation() {
     }, [pageable])
     
     return(
-        <section className="flex flex-col items-center px-auto py-10 gap-10 ">
+        <section className="flex flex-col items-center py-5  gap-10 ">
             <h1 className="text-center text-5xl font-[700]">Recommandations</h1>
-            <ul className="flex gap-5 flex-row flex-wrap">
+            <div className="flex gap-5 py-10 px-10 flex-row flex-wrap">
                 { 
                    carResponse?.content?.slice(0, 6).map((car: CarDtoResponse, index: number) => {
                     return (
-                       <li key={index}><CarCard  car={car}/></li> 
+                       <div key={index}><CarCard  car={car}/></div> 
                     );
                   })
                 }
-            </ul>
+            </div>
             <CustomButton handleClick={()=> router.push('/cars')} type="button">View all cars</CustomButton>
         </section>
     );

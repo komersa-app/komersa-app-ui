@@ -23,17 +23,17 @@ export default function Recommandation() {
     }, [pageable])
     
     return(
-        <section className="flex flex-col items-center px-auto py-6 ">
+        <section className="flex flex-col gap-10 items-center py-6 ">
             <h1 className="text-center text-5xl font-[700]">View Cars</h1>
-            <ul className="flex gap-5 flex-row flex-wrap">
+            <div className="flex gap-5 py-10 px-10  flex-row flex-wrap">
                 { 
                    carResponse?.content?.map((car: CarDtoResponse, index: number) => {
                     return (
-                       <li key={index}><CarCard  car={car}/></li> 
+                       <div key={index}><CarCard  car={car}/></div> 
                     );
                   })
                 }
-            </ul>
+            </div>
         </section>
     );
 }
