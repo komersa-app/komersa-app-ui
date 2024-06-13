@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@hookform/resolvers": "^3.6.0",
     "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.15.20",
     "axios": "^1.7.2",
     "next": "^14.2.3",
     "ra-data-simple-rest": "^4.16.17",
