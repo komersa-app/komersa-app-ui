@@ -3,7 +3,7 @@ import { carApi } from "./api";
 import { CarDtoRequest, Pageable } from "./typescript-client";
 
 export const carProvider : CustomDataProvider = {
-    getList: async function(page?: number, perPage?: number, filter?: any, meta?: any) {
+    getList: async function(page?: number, perPage?: number, sort?:any, filter?: any, meta?: any) {
         const pageable: Pageable = {};
         const cars = await carApi().getAllCar(pageable);
         return cars.data.content;
