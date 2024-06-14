@@ -3,5 +3,9 @@ export type CustomDataProvider = {
   getOne: (id: string, meta?: any) => Promise<any>;
   save: (resources: any, meta?: any) => Promise<any>;
   update: (id: string, resources: any, meta?: any) => Promise<any>;
-  delete: (id: string) => Promise<any>;    
+  delete: (id: string) => Promise<any>;
+  getManyReference: (id: string, meta?: any) => Promise<any>;
+  deleteMany: (filter?: any, meta?: any) => Promise<any>;
+  getMany: (filter?: any, sort?: any, page?: number, perPage?: number, meta?: any) => Promise<any>;
+  updateMany: (resources: any, filter?: any, meta?: any) => Promise<any>;
 }
