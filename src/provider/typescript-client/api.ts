@@ -103,19 +103,19 @@ export interface AppointmentDtoRequest {
      * @type {string}
      * @memberof AppointmentDtoRequest
      */
-    'name': string;
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppointmentDtoRequest
+     */
+    'datetime'?: string;
     /**
      * 
      * @type {string}
      * @memberof AppointmentDtoRequest
      */
     'status': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof AppointmentDtoRequest
-     */
-    'carId': number;
     /**
      * 
      * @type {string}
@@ -127,7 +127,13 @@ export interface AppointmentDtoRequest {
      * @type {number}
      * @memberof AppointmentDtoRequest
      */
-    'visitorId': number;
+    'carId'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppointmentDtoRequest
+     */
+    'visitorId'?: number;
 }
 /**
  * 
