@@ -1,1 +1,1 @@
-sudo docker build -t app-ui .
+echo ${PSWD} | sudo -S docker build -t app-ui .
