@@ -1,5 +1,6 @@
 'use client'
 
+import AppointmentForm from "@/components/appointment-front-office/Appointment";
 import Loader from "@/components/loader/loader";
 import { carApi } from "@/provider";
 import { CarDtoResponse } from "@/provider/typescript-client/api";
@@ -80,6 +81,9 @@ export default function CardDetails({params} : detailsProps) {
                     </div>
                 </div>
             )}
+            <div className="flex flex-col items-center mt-10 justify-center">
+                <AppointmentForm carId={carDetails?.id}  />
+            </div>
 
         </div>
     );

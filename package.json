@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^3.6.0",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.15.20",
+    "@mui/x-date-pickers": "^7.7.0",
     "axios": "^1.7.2",
     "next": "^14.2.3",
     "ra-data-simple-rest": "^4.16.17",
