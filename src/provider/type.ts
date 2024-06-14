@@ -5,3 +5,7 @@ export type CustomDataProvider = {
   update: (id: string, resources: any, meta?: any) => Promise<any>;
   delete: (id: string) => Promise<any>;    
 }
+
+export type BrandParam = {
+  name?: string;
+}
