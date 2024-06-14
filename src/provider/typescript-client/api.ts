@@ -109,7 +109,7 @@ export interface AppointmentDtoRequest {
      * @type {string}
      * @memberof AppointmentDtoRequest
      */
-    'datetime'?: string;
+    'datetime': string;
     /**
      * 
      * @type {string}
@@ -124,16 +124,16 @@ export interface AppointmentDtoRequest {
     'message': string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof AppointmentDtoRequest
      */
-    'carId'?: number;
+    'carId': number;
     /**
      * 
      * @type {number}
      * @memberof AppointmentDtoRequest
      */
-    'visitorId'?: number;
+    'visitorId': number;
 }
 /**
  * 
