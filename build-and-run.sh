@@ -1,0 +1,1 @@
+sh build-image.sh && sh run-image.sh
